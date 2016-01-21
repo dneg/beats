@@ -51,7 +51,7 @@ start() {
 		echo
 		exit 1
 	fi
-    daemon $daemonopts $wrapper $wrapperopts -- $agent $args
+    daemon $daemonopts $wrapper $wrapperopts -- $agent $args >& /dev/null
     RETVAL=$?
     echo
     return $RETVAL
